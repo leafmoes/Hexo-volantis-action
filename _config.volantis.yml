@@ -19,6 +19,172 @@ cover:
       url: /archives/
 ############################### Cover ############################### > end
 
+############################### Sidebar ############################### > start
+sidebar:
+  position: right # left right
+  # 主页、分类、归档等独立页面
+  for_page: [blogger, category, tagcloud, donate]
+  # layout: docs/post 这类文章页面
+  for_post: [toc]
+  # 侧边栏组件库
+  widget_library:
+    # ---------------------------------------
+    # blogger info widget
+    blogger:
+      class: blogger
+      display: [desktop, mobile] # [desktop, mobile]
+      avatar: https://cdn.jsdelivr.net/gh/leafmoes/leafmoes-cdn@master/conf-img/leafmoes.jpg
+      shape: rectangle # circle, rectangle
+      url: /about/
+      title:
+      subtitle:
+      jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
+      social:
+        - icon: fas fa-rss
+          url: /atom.xml
+        - icon: fas fa-envelope
+          url: mailto:leafmoes@qq.com
+        - icon: fab fa-github
+          url: https://github.com/leafmoes/
+        - icon: fas fa-headphones-alt
+          url: /
+    # ---------------------------------------
+    # toc widget (valid only in articles)
+    toc:
+      class: toc
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fas fa-list
+        title: 本文目录
+      list_number: true
+      min_depth: 2
+      max_depth: 5
+    # ---------------------------------------
+    # category widget
+    category:
+      class: category
+      display: [desktop] # [desktop, mobile]
+      header:
+        icon: fas fa-folder-open
+        title: 文章分类
+        url: /blog/categories/
+    # ---------------------------------------
+    # tagcloud widget
+    tagcloud:
+      class: tagcloud
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fas fa-tags
+        title: 热门标签
+        url: /blog/tags/
+      min_font: 14
+      max_font: 24
+      color: true
+      start_color: '#999'
+      end_color: '#555'
+    # ---------------------------------------
+    # qrcode widget
+    qrcode:
+      class: qrcode
+      display: [desktop, mobile] # [desktop, mobile]
+      height: 64px  # Automatic height if not set
+      images:
+        - 
+        - 
+    # ---------------------------------------
+    # webinfo widget
+    webinfo:
+      class: webinfo
+      display: [desktop]
+      header:
+        icon: fas fa-award
+        title: 站点信息
+      type:
+        article:
+          enable: true
+          text: '文章数目：'
+          unit: '篇'
+        runtime:
+          enable: true
+          data: '2021/08/10'    # 填写建站日期
+          text: '已运行时间：'
+          unit: '天'
+        wordcount:
+          enable: true
+          text: '本站总字数：'   # 需要启用 wordcount
+          unit: '字'
+        visitcounter:
+          service: leancloud  # busuanzi, leancloud
+          siteuv:
+            enable: true
+            text: '本站访客数：'
+            unit: '人'
+          sitepv:
+            enable: true
+            text: '本站总访问量：'
+            unit: '次'
+        lastupd:
+          enable: true
+          friendlyShow: true    # 更友好的时间显示
+          text: '最后活动时间：'
+          unit: '日'
+    # ---------------------------------------
+    # lastupdate widget
+    lastupdate:
+      class: lastupdate
+      display: [desktop, mobile]
+      header:
+        icon: fas fa-clock WISTERIA
+        title: 最近更新
+############################### Sidebar ############################### > end
+
+############################### Rightmenu ############################### > start
+# 自定义右键菜单
+rightmenu:
+  enable: true
+  faicon: fa              # 公共图标类型 fa fal fas fad
+  # hr: 分割线, music: 音乐控制器
+  layout: [home, hr, help, examples, contributors, hr, source_docs, source_theme, hr, print, darkmode, reading, music]
+  ### 可选功能项 ###
+  print:                  # 只有文章页才允许自定义打印
+    name: 打印页面
+    icon: fa fa-print
+    defaultStyles: true   # 是否使用预制的打印样式
+    # js:                 # 自定义 js ，可用于修饰打印样式~， 右键剔除了对 Jquery 的依赖，所以此处你只能使用原生 js
+    #  - document.querySelector('article#comments').remove()  # 移除评论
+  darkmode:        # 需开启 plugins.darkmodejs
+    name: 暗黑模式
+    icon: fa fa-moon
+  reading:
+    name: 阅读模式
+    icon: fa fa-book-open
+  customPicUrl:    # 右键的图片复制：只有 Chrome 支持，且只支持 PNG 格式的图片。
+    enable: false  # 如果使用了对象存储且开启了自适应 Webp，那么可以提供额外的链接用以替换图片的访问地址
+    old: #https://static.inkss.cn/img/article/
+    new: #https://cdn.jsdelivr.net/gh/inkss/inkss-cdn@master/img/article/
+  ### 自定义菜单 ###
+  # help:
+    # name: 常见问题
+    # icon: fa fa-question
+    # url: https://volantis.js.org/faqs/
+  # examples:
+    # name: 示例博客
+    # icon: fa fa-rss
+    # url: https://volantis.js.org/examples/
+  # contributors:
+    # name: 加入社区
+    # icon: fa fa-fan fa-spin
+    # url: https://volantis.js.org/contributors/
+  # source_docs:
+    # name: 本站源码
+    # icon: fa fa-code-branch
+    # url: https://github.com/volantis-x/volantis-docs/
+  # source_theme:
+    # name: 主题源码
+    # icon: fa fa-code-branch
+    # url: https://github.com/volantis-x/hexo-theme-volantis/
+############################### Rightmenu ############################### > end
+
 ############################### CDN ###############################
 # 本地静态文件使用jsdelivr的min版本加速 https://www.jsdelivr.com/features
 # 默认使用 https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/js/*.min.js 的CDN压缩版本(min.js)，注意版本号对应关系！！可以通过修改以下配置项覆盖

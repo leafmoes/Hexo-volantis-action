@@ -17,7 +17,7 @@ description: # 页面描述、摘要|String|-
 cover: # 是否显示封面	|Bool|true
 top_meta: #	是否显示文章或页面顶部的meta信息|Bool|true
 bottom_meta: # 是否显示文章或页面底部的meta信息|Bool|true
-sidebar:[] # 页面侧边栏|Bool, Array|theme.layout.*.sidebar
+sidebar: # 页面侧边栏|Bool, Array|theme.layout.*.sidebar
 body: #	页面主体元素|Array|theme.layout.on_page.body
 mathjax: # 是否渲染公式|Bool, String|false
 thumbnail: # 缩略图|String|false
