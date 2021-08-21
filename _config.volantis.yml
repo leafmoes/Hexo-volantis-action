@@ -8,7 +8,7 @@ cover:
     others: false # can be written in front-matter 'cover: true'
   background: https://cdn.jsdelivr.net/gh/leafmoes/leafmoes-cdn@master/conf-img/background.jpg
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
-  logo: https://cdn.jsdelivr.net/gh/leafmoes/leafmoes-cdn@master/conf-img/favicon.png
+  logo: # https://cdn.jsdelivr.net/gh/leafmoes/leafmoes-cdn@master/conf-img/favicon.png
   title: 'Leafmoes'
   subtitle: '秋至叶始落，叶落方知秋'
   search: A Small blog. # search bar placeholder
