@@ -353,7 +353,7 @@ comments:
 custom_css:
   toc_smooth: true # TOC 目录平滑滚动效果
   cursor:
-    enable: #true
+    enable: true
     text: https://cdn.jsdelivr.net/gh/inkss/common@1/cursor/text.png
     pointer: https://cdn.jsdelivr.net/gh/inkss/common@1/cursor/pointer.png
     default: https://cdn.jsdelivr.net/gh/inkss/common@1/cursor/left_ptr.png
