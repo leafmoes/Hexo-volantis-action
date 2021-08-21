@@ -1,5 +1,6 @@
 ---
 title: Hello World[本文为博客自动生成文章]
+headimg: https://cdn.jsdelivr.net/gh/leafmoes/leafmoes-cdn/img/202108191634017.jpg
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
