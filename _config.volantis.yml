@@ -24,7 +24,7 @@ cover:
 navbar:
   visiable: auto # always, auto
   logo: # choose [img] or [icon + title]
-    img: https://cdn.jsdelivr.net/gh/leafmoes/leafmoes-cdn@master/conf-img/1.png
+    img: https://cdn.jsdelivr.net/gh/leafmoes/leafmoes-cdn@master/conf-img/logo.png
     icon:
     title:
   menu:
