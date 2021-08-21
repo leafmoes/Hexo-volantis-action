@@ -215,6 +215,140 @@ rightmenu:
     # url: https://github.com/volantis-x/hexo-theme-volantis/
 ############################### Rightmenu ############################### > end
 
+############################### Comments ############################### > start
+comments:
+  title: <i class='fas fa-comments'></i> 评论
+  subtitle:
+  service: twikoo # beaudar, valine, twikoo, waline, minivaline, disqus, disqusjs, gitalk, vssue, livere, isso, hashover
+  # beaudar
+  # https://beaudar.lipk.org/
+  beaudar:
+    repo: xxx/xxx
+    issue-term: pathname
+    issue-number:
+    branch: main
+    position: top
+    order: desc
+    theme:
+      light: github-light
+      dark: github-dark
+    label: ✨💬✨
+    crossorigin: anonymous
+  # utterances
+  # https://utteranc.es/
+  utterances:
+    repo: xxx/xxx
+    issue-term: pathname
+    issue-number:
+    theme:
+      light: github-light
+      dark: github-dark
+    label: ✨💬✨
+    crossorigin: anonymous
+  # Valine
+  # https://valine.js.org/
+  valine:
+    # js: https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js
+    path: # 全局评论地址 目前设置全局评论地址后visitor失效,这是valine的问题
+    placeholder: 快来评论吧~  # 评论占位提示
+    # 其他配置项按照yml格式继续填写即可 除了 [el path placeholder emojiCDN emojiMaps] 选项
+    appId: # your appId
+    appKey: # your appKey
+    meta: [nick,mail,link] # valine comment header info
+    requiredFields: [nick,mail]
+    enableQQ: true # Unstable avatar link
+    recordIP: false # Record commenter IP
+    avatar: robohash # gravatar style https://valine.js.org/avatar
+    pageSize: 10 # comment list page size
+    lang: zh-cn
+    highlight: true
+    mathJax: false
+  # MiniValine
+  # https://github.com/MiniValine/MiniValine
+  minivaline:
+    js: https://cdn.jsdelivr.net/npm/minivaline@latest
+    path: # 全局评论地址
+    placeholder: 快来评论吧~  # 全局评论占位提示
+    # 更多选项 https://minivaline.js.org/docs/cn/#/Options 按照yml格式继续填写即可 （除了 [el path placeholder] 选项）
+    # 下面是一个例子：
+    serverURL: https://hello.com
+  # Disqus
+  # https://disqus.com
+  disqus:
+    shortname:
+    # optional
+    autoload: false
+    path: # 全局评论地址
+  # DisqusJS
+  # https://github.com/SukkaW/DisqusJS
+  disqusjs:
+    path: # 全局评论地址
+    # 配置项按照yml格式继续填写即可 除了 [siteName url identifier] 选项
+    #shortname:
+    #api:
+    #apikey:
+    #admin:
+    #nesting:
+  # Gitalk
+  # https://gitalk.github.io/
+  gitalk:
+    # 配置项按照yml格式继续填写即可 除了 [id distractionFreeMode] 选项
+    clientID:
+    clientSecret:
+    repo:
+    owner:
+    admin: # []
+    path: # 全局评论地址
+  # Vssue 暂不支持Pjax
+  # https://vssue.js.org/zh/
+  vssue:
+    owner:
+    repo:
+    clientId:
+    clientSecret:
+  # LiveRe 暂不支持Pjax
+  # https://www.livere.com
+  livere:
+    uid:
+  # Isso
+  # https://posativ.org/isso/
+  isso:
+    url: https://example.com/(path/)
+    src: https://example.com/(path/)js/embed.min.js
+    css:
+    gravatar:
+  # HashOver 暂不支持Pjax
+  # https://www.barkdull.org/software/hashover
+  hashover:
+    src: https://example.com/(path/)comments.php
+  # Twikoo
+  # https://twikoo.js.org/
+  twikoo:
+    js: https://cdn.jsdelivr.net/npm/twikoo@latest # 建议锁定版本
+    path: # 全局评论地址
+    # 其他配置项按照yml格式继续填写即可 除了 [el path] 选项
+    envId: https://twikoo-h64x.vercel.app/ # 环境id
+    placeholder: #全局评论占位，也可以在管理面板中的配置管理处设置（此处优先级更高）
+  # Waline
+  # https://waline.js.org/
+  waline:
+    js: https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js
+    path: # 全局评论地址 目前设置全局评论地址后visitor失效,这是waline的问题
+    placeholder: 快来评论吧~  # 评论占位提示
+    imageHosting: https://7bu.top/api/upload # 图床api（默认使用去不图床）
+    # 其他配置项按照yml格式继续填写即可 除了 [el path placeholder uploadImage] 选项
+    meta: [nick,mail,link] # waline comment header info
+    requiredFields: [nick,mail]
+    serverURL: xxxxxxxxxxxxxxx # Waline 的服务端地址（必填） 测试用地址: https://waline-ruddy.vercel.app
+    avatar: robohash # gravatar style https://waline.js.org/client/basic.html#avatar
+    avatarCDN: #https://sdn.geekzu.org/avatar/
+    pageSize: 10 # 评论每页显示数量
+    lang: zh-CN
+    visitor: true
+
+
+############################### Comments ############################### > end
+
 ############################### CDN ###############################
 # 本地静态文件使用jsdelivr的min版本加速 https://www.jsdelivr.com/features
 # 默认使用 https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/js/*.min.js 的CDN压缩版本(min.js)，注意版本号对应关系！！可以通过修改以下配置项覆盖
